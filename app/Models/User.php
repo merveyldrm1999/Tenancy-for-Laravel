@@ -4,11 +4,12 @@ namespace App\Models;
 
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Notifications\Notifiable;
 
 class User extends Authenticatable
 {
     use HasFactory;
-
+    use Notifiable;
     protected $fillable=[
         'name','password','domain','email'
     ];
@@ -21,5 +22,9 @@ class User extends Authenticatable
       });
     }
 
+    public function routeNotificationForSlack($notification)
+    {
+        return env('SLACK_WEBHOOK_URL');
+    }
 
 }

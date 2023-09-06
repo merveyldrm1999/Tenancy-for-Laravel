@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\Login\LoginRequest;
+use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -26,6 +27,7 @@ class LoginController extends Controller
     }
 
     public function index() {
+        User::find(1)->notify(new \App\Notifications\HelloNotification());
         //return login view
         return view('login');
     }
