@@ -1,5 +1,5 @@
 
-##  Tenancy-for-Laravel Kullanımı
+##  Tenancy-for-Laravel-My-Project Kullanımı
 
 ![My animated logo](ReadMe.png)
 
