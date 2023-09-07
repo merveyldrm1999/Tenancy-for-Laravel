@@ -27,7 +27,6 @@ class LoginController extends Controller
     }
 
     public function index() {
-        User::find(1)->notify(new \App\Notifications\HelloNotification());
         //return login view
         return view('login');
     }

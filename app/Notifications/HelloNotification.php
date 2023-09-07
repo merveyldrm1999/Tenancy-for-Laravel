@@ -65,7 +65,7 @@ class HelloNotification extends Notification
     public function toSlack(object $notifiable): SlackMessage
     {
         return (new SlackMessage())
-            ->text('Sonunda!')
+            ->text('Güzel bir uyku çek!')
             ;
     }
 }

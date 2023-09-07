@@ -29,5 +29,8 @@ Route::middleware([
     Route::post('/',[App\Http\Controllers\Tenant\BlogController::class,'store'])->name('blog');
 
 
+
+    Route::get('/register',[App\Http\Controllers\Tenant\RegisterController::class,'index'])->name('register');
+    Route::post('/register',[App\Http\Controllers\Tenant\RegisterController::class,'store'])->name('storeRegister');
 });
 

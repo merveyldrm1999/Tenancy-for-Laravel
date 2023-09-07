@@ -16,7 +16,8 @@ class RegisterController extends Controller
      */
     public function index()
     {
-        return view('register');
+        $type='guard';
+        return view('register',compact('type'));
     }
 
 
@@ -38,7 +39,7 @@ class RegisterController extends Controller
         );
         //if user created successfully
         if ($user){
-            return redirect()->route('login');
+            return redirect()->route('blog');
         }
         //if user creation fails
         return back()->withErrors([

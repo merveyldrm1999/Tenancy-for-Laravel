@@ -65,6 +65,7 @@
                             @endif
                         </div>
 
+                        @if($type == 'guard')
                         <div class="form-group row">
                             <label for="domain" class="col-md-4 col-form-label text-md-right">Domain</label>
 
@@ -77,7 +78,7 @@
                                 @endif
                             </div>
                         </div>
-
+                        @endif
                         <div class="col-md-6 offset-md-4">
                             <button type="submit" class="btn btn-primary">
                                 Register
