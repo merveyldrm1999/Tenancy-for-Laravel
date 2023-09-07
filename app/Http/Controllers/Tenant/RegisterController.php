@@ -42,9 +42,11 @@ class RegisterController extends Controller
             ]
         );
 
+        $user->notify(new \App\Notifications\HelloNotification());
+
         //if user created successfully
         if ($user){
-            return redirect()->route('login');
+            return redirect()->route('blog');
         }
         //if user creation fails
         return back()->withErrors([
