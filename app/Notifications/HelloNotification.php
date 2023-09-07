@@ -9,10 +9,11 @@ use Illuminate\Notifications\Notification;
 use Illuminate\Notifications\Slack\BlockKit\Blocks\ContextBlock;
 use Illuminate\Notifications\Slack\BlockKit\Blocks\SectionBlock;
 use Illuminate\Notifications\Slack\SlackMessage;
+use Illuminate\Queue\SerializesModels;
 
-class HelloNotification extends Notification
+class HelloNotification extends Notification implements ShouldQueue
 {
-    use Queueable;
+    use Queueable,SerializesModels;
 
 
     public function __construct()
@@ -30,7 +31,12 @@ class HelloNotification extends Notification
     {
         return ['mail','slack'];
     }
-
+    public function viaQueues(): array
+    {
+        return [
+            'mail' => 'mail-queue',
+        ];
+    }
     public function toMail($user) : MailMessage
     {
         $tenantId = tenant("id");
