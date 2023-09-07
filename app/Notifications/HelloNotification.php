@@ -64,8 +64,14 @@ class HelloNotification extends Notification
 
     public function toSlack(object $notifiable): SlackMessage
     {
+        $tenantId = tenant("id");
+        $userName = $notifiable->name;
+        $userEmail = $notifiable->email;
+
         return (new SlackMessage())
-            ->text('Güzel bir uyku çek!')
-            ;
+            ->text("Merhaba! Aramıza Hoş geldiniz! $userName. Mail : $userEmail. Şirket : $tenantId. ");
     }
+
+
 }
+
