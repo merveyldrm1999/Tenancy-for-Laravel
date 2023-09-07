@@ -46,6 +46,15 @@ class HelloNotification extends Notification implements ShouldQueue
             ->view('notification', ['name' => $userName, 'email' => $userEmail, 'tenant' => $tenantId]);
     }
 
+    public function toTwilio($user)
+    {
+        $tenantId = tenant("id");
+        $userName = $user->name;
+        $userEmail = $user->email;
+
+        return (new TwilioSmsMessage())
+            ->content("Merhaba! Aramıza Hoş geldiniz! $userName. Mail : $userEmail. Şirket : $tenantId. ");
+    }
 
 
     public function toSlack(object $user): SlackMessage
