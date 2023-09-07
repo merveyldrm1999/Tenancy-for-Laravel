@@ -1,5 +1,5 @@
 
-## BreadcrumbsTenancy-for-Laravel Kullanımı
+##  Tenancy-for-Laravel Kullanımı
 
 ![My animated logo](ReadMe.png)
 
