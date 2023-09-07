@@ -54,3 +54,17 @@ Merhaba! Aramıza Hoş geldiniz! {{username}}. Mail : {{mail@mail.com}}. Şirket
 
 
  
+#### Ana Kullanıcı Blog
+
+```http
+   localhost:8000/login
+```
+
+|  | Tip     | Açıklama                |
+| :-------- | :------- | :------------------------- |
+| `title` | `string` | **Gerekli**. |
+| `description` | `string` | **Gerekli**. |
+
+**Her subdomain kendine ait blog ekleyebilir.**
+
+
