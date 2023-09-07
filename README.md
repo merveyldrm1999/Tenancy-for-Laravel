@@ -57,7 +57,7 @@ Merhaba! Aramıza Hoş geldiniz! {{username}}. Mail : {{mail@mail.com}}. Şirket
 #### Ana Kullanıcı Blog
 
 ```http
-   localhost:8000/login
+   subDomain.localhost:8000/
 ```
 
 |  | Tip     | Açıklama                |
