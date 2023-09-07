@@ -39,7 +39,7 @@ class RegisterController extends Controller
         );
         //if user created successfully
         if ($user){
-            return redirect()->route('blog');
+            return redirect()->route('login');
         }
         //if user creation fails
         return back()->withErrors([
