@@ -27,7 +27,7 @@ class RegisterRequest extends FormRequest
             "name"=> "required|string",
             "email" => "required|email|unique:users,email",
             "password" => "required|min:8",
-            "domain"=>"required|regex:/^[a-z0-9\s\.-]+$/",
+            "domain" => "required|regex:/^[a-z0-9\s\.-]+$/|unique:users,domain",
         ];
     }
 }
